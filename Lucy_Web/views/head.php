@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<?php unset($_SESSION['cater']) ?>
+
 <html lang="en">
 
 	<head>

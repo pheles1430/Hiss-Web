@@ -110,16 +110,35 @@
 							<div></div>
 							
 							<?php 
-							
-							if(!isset($_SESSION['USER'])) {
-								
-								include("views/login.php");
+                                if(!isset($_SESSION['cater']) || $_SESSION['cater'] == true) {
+                            
+                                    if(!isset($_SESSION['USER'])) {
 
-							} else {
+                                        include("views/login.php");
 
-								echo '';
+                                    } else {
 
-							} ?>
+                                        include("views/profile.php");
+
+                                    }
+                                    
+                                    $_SESSION['cater'] = false;
+                                    
+                                } else {
+
+                                    if(!isset($_SESSION['USER'])) {
+
+                                        include("../views/login.php");
+
+                                    } else {
+
+                                        include("../views/profile.php");
+
+                                    }
+                                    
+                                }
+                            
+                            ?>
 							
 						</div>
 

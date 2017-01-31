@@ -21,14 +21,31 @@ $(document).ready(function() {
 		
 		var temp = $(this).find('.send').html();
 		var check = false;
-		
+        var login;
+        
+        if($(this).attr('id') == 'logout-form') {
+			
+            login = Ajax2('POST', 'config/config.php', data);
+            
+            if(login == "Logout Successful") {
+
+                $('nav.navbar').remove();
+
+                $('div.content').before(Ajax2('GET', 'views/nav.php'));
+
+            }
+            
+            return false;
+
+        }
+        
 		check = checkEmpty($(this));
 		
 		if (check == true) {
 			
 			$(this).find('.send').html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; sending ...');
 
-			var login = Ajax2('POST', 'config/config.php', data);
+			login = Ajax2('POST', 'config/config.php', data);
 			
 			alert(login);
 			
@@ -147,6 +164,14 @@ $(document).ready(function() {
 		behavior: 'smooth'
 		
 	});
+    
+    //tab system
+    
+    $(document).on('click', '.nav-tab li', function() {
+        
+        tabSystem(this);
+        
+    });
 
 });
 
@@ -301,4 +326,8 @@ function Ajax2(type, url, value) { //Ajax to fetch page
 
 }
 
+function tabSystem(element) {
 
+      $(element).tab('show');
+    
+}

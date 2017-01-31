@@ -103,6 +103,8 @@ class Configure {
 		} else {
 			
 			unset($_SESSION['USER']);
+            
+            echo "Logout Successful";
 			
 		}
 		

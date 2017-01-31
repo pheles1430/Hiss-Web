@@ -78,7 +78,7 @@ nav form {
 	
 	position: relative;
 	color: #fff;
-	height: 75%;
+	height: 100%;
 	
 }
 
@@ -203,7 +203,7 @@ div.dropdown-menu {
 	
 }
 
-div.dropdown-menu > div {
+div.dropdown-menu > div:nth-of-type(1) {
 	
 	position: absolute;
 	top: 0;
