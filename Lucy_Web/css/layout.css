@@ -1,0 +1,414 @@
+html, body {
+	
+	position: relative;
+    width: 100% !important;
+	height: 100% !important;
+	font-family: sans-serif, serif, verdana;
+	font-size: 15px;
+	margin: 0 !important;
+	padding: 0;
+	background-color: #f9f9f9;
+	
+}
+
+nav {
+	
+	position: relative !important;
+	margin:0 !important;
+	top: 0;
+	padding-right: 0 !important;
+	border-radius: 0 !important;
+	height: 75px;
+	
+}
+
+nav .navbar-brand {
+	
+	position: relative;
+	transform: translateY(25%);
+	text-transform: uppercase;
+	
+}
+
+nav ul {
+	
+	position: absolute;
+	right: 0 !important;
+	
+}
+
+nav li:not(:last-child) {
+	
+	border-right: 1px #777 solid;
+	
+}
+
+nav li {
+	
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 140px;
+	height: 100%;
+	margin: 0;
+	
+}
+
+nav li i {
+	
+	font-size: 20px !important;
+	
+}
+
+nav li span {
+	
+	position: relative;
+	font-size: 12px;
+	
+}
+
+nav form {
+	
+	display: none;
+	
+}
+
+#homeback {
+	
+	position: relative;
+	color: #fff;
+	height: 75%;
+	
+}
+
+#homeback .back {
+	
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background:url('../images/homeback.jpg') ;
+	background-size: 100% 120%;
+	background-position: center;
+	background-attachment: fixed;
+	transition: all ease-in-out 0.3s;
+	text-shadow: 2px 2px #000;
+	
+}
+
+#homeback .cover {
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: #000;
+	opacity: .35;
+	transition: all ease-in-out 0.3s;
+	
+}
+
+#homeback a {
+	
+	width: 250px;
+	background: transparent;
+	border: 1px #e5e5e5 solid;
+	
+}
+
+#homeback a:hover {
+	
+	background: rgba(0,0,0,.5);
+	
+}
+
+#homeback .parallax {
+	
+	position: relative;
+	height: 200%;
+	margin: 0;
+	padding: 15px;
+	left: 60%;
+	width: 40%;
+	background: rgba(0,0,0,.4);
+	display: block;
+	
+}
+
+#homeback .parallax p {
+	
+	font-size: 20px;
+	
+}
+
+div.carousel div.slide {
+	
+	width: 100%;
+	height: 600px;
+	color: #fff;
+	font-weight: bolder;
+	font-size: 50px;
+	background: transparent;
+	
+}
+
+div.carousel div.slide1 {
+	
+	background: url("../images/bcg_slide-1.jpg") no-repeat center center !important;
+	background-size: cover !important;
+	
+}
+
+div.carousel div.slide2 {
+	
+	background: url("../images/bcg_slide-2.jpg") no-repeat center center !important;
+	background-size: cover !important;
+	
+}
+
+div.carousel div.slide3 {
+	
+	background: url("../images/bcg_slide-3.jpg") no-repeat center center !important;
+	background-size: cover !important;
+	
+}
+
+div.carousel div.slide4 {
+	
+	background: url("../images/bcg_slide-4.jpg") no-repeat center center !important;
+	background-size: cover !important;
+	
+}
+
+div.carousel div.slide p {
+	
+	position: relative;
+	transform: translate(46.5%, 50%);
+	
+}
+
+div.dropdown-menu {
+	
+	position: relative;
+	margin-left: -100%;
+	width: 201%;
+	height: 275px;
+	background: transparent;
+	padding: 0 !important;
+	margin-top: 0;
+	border-top: none;
+	color: #fff;
+	filter: none;
+	
+}
+
+div.dropdown-menu > div {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(../images/homeback.jpg);
+	-webkit-filter: blur(5px); /* Chrome, Opera, etc. */
+	filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
+	filter: blur(10px);
+	opacity: .9;
+	z-index: -3;
+	
+}
+
+div.dropdown-menu form {
+	
+	position: relative;
+	display: block;
+	padding: 0;
+	padding-top: 15px;
+	width: 80%;
+	
+}
+
+div.dropdown-menu form span {
+	
+	position: relative;
+	margin-top: -15px !important;
+	
+}
+
+#myModal input {
+    
+    width: 50%;
+    
+}
+
+#myModal .modal-content {
+    
+    border: none;
+    
+}
+
+#myModal .modal-content .cover {
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+	-webkit-filter: blur(5px) !important; /* Chrome, Opera, etc. */
+	filter: url('blur.svg#blur') !important; /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
+	filter: blur(10px) !important;
+	opacity: 1;
+	z-index: -3;
+    
+}
+
+div.row-services {
+	
+	position: relative;
+	left: 50%;
+	transform: translateX(-45%);
+	
+}
+
+div.services {
+	
+	position: relative;
+	width: 235px;
+	height: 325px;
+	padding: 15px;
+	padding-top: 30px;
+	padding-bottom: 0;
+	text-align: center;
+	border: 2px #e5e5e5 solid;
+	border-radius: 15px;
+	background-color: #fff;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
+
+div.services > div:nth-of-type(1) {
+	
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+	background-position: center;
+	
+	
+}
+
+div.services:nth-of-type(1) > div:nth-of-type(1) {
+	
+	background-image: url(../images/walking_dog.svg);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-color: #33a1d6;
+	
+}
+
+div.services:nth-of-type(2) > div:nth-of-type(1) {
+	
+	background-image: url(../images/feeding_dog.png);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-color: #78cef9;
+	
+}
+
+div.services:nth-of-type(3) > div:nth-of-type(1) {
+	
+	background-image: url(../images/puppy.svg);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-color: #78f9d5;
+	
+}
+
+div.services:nth-of-type(4) > div:nth-of-type(1) {
+	
+	background-image: url(../images/playing_dog.png);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-color: #36d4a8;
+	
+}
+
+div.services > p {
+	
+	position: relative;
+	font-size: 20px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	
+}
+
+div.services > a {
+	
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	margin-bottom: 30px;
+	
+}
+
+div.booking {
+	
+	height: 50% !important;
+	
+}
+
+div.booking .cover {
+	
+	opacity: .4 !important;
+	
+}
+
+div.booking .back {
+	
+	background:url('../images/booking.jpg') !important;
+	background-size: 100% 100% !important;
+	background-attachment: fixed !important;
+	webkit-filter: none !important;
+	-moz-filter: none !important;
+	-o-filter: none !important;
+	-ms-filter: none !important;
+	filter: none !important;
+	
+}
+
+div.booking .parallax {
+	
+	position: relative !important;
+	left: 0 !important;
+	margin-left: 50px !important;
+	width: 40% !important;
+	background: none !important;
+	
+}
+
+div.booking .parallax p {
+	
+	font-size: 25px;
+	
+}
+
+div.content {
+    
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+footer p {
+	
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	
+}
