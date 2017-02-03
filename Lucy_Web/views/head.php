@@ -27,8 +27,6 @@
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>  
 
 		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <link href='/libraries/calendar/fullcalendar.min.css' rel='stylesheet' />
-        <link href='/libraries/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
 		
 		<!-- Animate.css -->
 		<link rel="stylesheet" href="css/animate.css">

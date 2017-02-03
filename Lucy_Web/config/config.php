@@ -71,7 +71,7 @@ class Configure {
 			
 		}
 		
-		return $this->SecurityDecode($object);
+		return $object;
 		
 	}
 	
@@ -147,17 +147,17 @@ class Configure {
 	public function SecurityDecode($object) {
 		
 		if(is_array($object)) {
-		
+
 			foreach($object as $property => $value) {
-				
+
 				$object[$property] = html_entity_decode(trim($value), ENT_QUOTES | ENT_IGNORE, "UTF-8");
 
 			}
-			
+
 		} else {
-			
+
 			$object = html_entity_decode(trim($object), ENT_QUOTES | ENT_IGNORE, "UTF-8");
-			
+
 		}
 		
 		return $object;
@@ -231,11 +231,11 @@ if(isset($_POST["action"])) {
 	
 	if($_POST["action"] != 'login' && $_POST["action"] != 'check' && !isset($_POST["controller"])) {
 	
-		echo $conf->ActionResult($_POST["action"], $_POST["controller"] = '', $_POST);
+		return $conf->ActionResult($_POST["action"], $_POST["controller"] = '', $_POST);
 		
 	} elseif($_POST["action"] != 'login' && $_POST["action"] != 'check') {
         
-        echo $conf->ActionResult($_POST["action"], $_POST["controller"], $_POST);
+        return $conf->ActionResult($_POST["action"], $_POST["controller"], $_POST);
         
     } elseif($_POST["action"] == 'login') {
 		

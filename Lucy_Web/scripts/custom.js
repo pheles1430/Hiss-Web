@@ -224,6 +224,36 @@ function fetchPage(element) {
     var value = { action: action, controller: controller };
 	
 	$('div.content').html(Ajax2('POST', 'config/config.php', value));
+	
+	if($(element).attr('title') == 'PET SECTION') {
+	
+		action = 'getList';
+		value = { action: action, controller: controller };
+		
+		values = [];
+		Avalues = [];
+
+		Avalues[0] = 'dogname';
+		Avalues[1] = 'dogage';
+		Avalues[2] = 'dograce';
+		Avalues[3] = 'doggender';
+		Avalues[4] = 'dogweight';
+
+		Ajax('POST', 'config/config.php', value);
+
+		for(var i = 0; i < values.length; i += 5) {
+			
+			$('table tbody').append('<tr></tr>');
+			
+			$('table tbody tr:last-child').append('<td>'+ values[i] +'</td>');
+			$('table tbody tr:last-child').append('<td>'+ values[i + 1] +'</td>');
+			$('table tbody tr:last-child').append('<td>'+ values[i + 2] +'</td>');
+			$('table tbody tr:last-child').append('<td>'+ values[i + 3] +'</td>');
+			$('table tbody tr:last-child').append('<td>'+ values[i + 4] +'</td>');
+			
+		}
+	
+	}
 
 }
 
@@ -254,17 +284,17 @@ var Avalues = new Array(1000); //store the fields to be fetched from Json return
 function Ajax(type, url, value) { //Ajax to fetch data
 
     var j = 0; //counter to save each values in a number of 2
-
+	
     $.ajax({
-
+		
         type: type,
         url: url,
         data: value, //{ get_param: 'value' }
         dataType: 'json',
         async: false,
         success: function (data) { //data should always be returned as a Json List
-
-            var count = data.Index.length
+		
+            var count = data.length;
 
             var j = 0;
 
@@ -272,7 +302,7 @@ function Ajax(type, url, value) { //Ajax to fetch data
 
                 for (var k = 0; k < Avalues.length; k++) { //looping through fields having been fetched
 
-                    values[j] = data.Index[i][Avalues[k]]; //assigning id and field in different slots
+                    values[j] = data[i][Avalues[k]]; //assigning id and field in different slots
 
                     j++
 
@@ -283,9 +313,9 @@ function Ajax(type, url, value) { //Ajax to fetch data
             return values;
 
         },
-        error: function (result) {
+        error: function (jqXHR, textStatus, errorThrown) {
 
-            alert("Error");
+			alert(errorThrown);
 
             return false;
 
@@ -306,7 +336,7 @@ function Ajax2(type, url, value) { //Ajax to fetch page
         async: false,
         data: value, //{ get_param: 'value' }
         success: function (data) {
-
+			
             result = data;
 
         },

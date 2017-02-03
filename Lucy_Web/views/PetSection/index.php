@@ -1,3 +1,8 @@
+<?php 
+	
+	
+
+?>
 
         <div class="petsection">
             <div class="pettable">
@@ -19,29 +24,6 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>
-                                <div>Cheeta</div>
-                            </td>
-                            <td>
-                                 <div>7</div>
-                            </td>
-                            <td>
-                                 <div>German shepherd</div>
-                            </td>
-                            <td>
-                                <div>Female</div>
-                            </td>
-                            <td>
-                                <div>50Kg</div>
-                            </td>
-                            <td>
-                                <div>Vegetable Package</div>
-                            </td>
-                            <td>
-                                <div>Beef & Veg Package</div>
-                            </td>
-                        </tr>
 
                     </tbody>
 

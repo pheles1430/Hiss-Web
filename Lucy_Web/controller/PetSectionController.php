@@ -10,6 +10,20 @@
 
 		}
 		
+		public function getList() {
+			
+			$conf = new Configure;
+			
+			$pets = new Pets;
+			
+			$pets->GetPetsList();
+			
+			//echo json_encode($pets);
+            
+			return false;
+			
+		}
+		
 	}
 
 ?>

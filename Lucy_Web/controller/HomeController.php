@@ -24,9 +24,9 @@
 		
 		public function insertPet($object) {
 			
-			$member = new Member($object);
+			$pets = new pets($object);
 			
-			$member->insertNewPet($member);
+			$pets->insertNewPet($pets);
 			
 			//$conf = new Configure;
 			//return $conf->View(null, 'índex');

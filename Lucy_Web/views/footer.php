@@ -169,9 +169,6 @@
 	<script src="css/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
     <script type="text/javascript" src="scripts/custom.js"></script>  
-    <script src='/libraries/calendar/lib/moment.min.js'></script>
-    <script src='/libraries/calendar/lib/jquery.min.js'></script>
-    <script src='/libraries/calendar/fullcalendar.min.js'></script>
     
 
 	</body>
