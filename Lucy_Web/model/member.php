@@ -61,13 +61,13 @@ class Member {
     
     public function insertNewPet($object) {
 		
-            session_start();
-		    include('../connection.php');
+		session_start();
+		include('../connection.php');
+
+		$q = "INSERT INTO tbl_pets (petname, petage, petrace, petgender, petweight, joining_date) values ('$object->dogname', '$object->dogage', '$object->dograce','$object->doggender', $object->dogweight, current_date())";
+		mysqli_query ($dbc, $q);
 			
-			$q = "INSERT INTO tbl_pets (petname, petage, petrace, petgender, petweight, joining_date) values ('$object->dogname', '$object->dogage', '$object->dograce','$object->doggender', $object->dogweight, current_date())";
-			mysqli_query($dbc, $q);
-			
-		}
+	}
 	
 }
 

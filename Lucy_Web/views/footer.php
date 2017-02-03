@@ -33,7 +33,7 @@
                                 <div class="row">
                                     <div class="panel panel-primary">
                                         <div class="panel-body">
-                                            <form  method="POST" id="register-form" data-action="insertMember" data-controller="index">
+                                            <form  method="POST" id="register-form" data-action="insertMember" data-controller="home">
                                                 <div class="form-group">
                                                     <h2>Create account</h2>
                                                 </div>
@@ -91,7 +91,7 @@
                                 <div class="row">
                                     <div class="panel panel-primary">
                                         <div class="panel-body">
-                                            <form method="POST" action="#" role="form">
+                                            <form id="register-form" data-action="insertPet" data-controller="home">
                                                 <div class="form-group">
                                                     <h2>Register your Dog</h2>
                                                 </div>

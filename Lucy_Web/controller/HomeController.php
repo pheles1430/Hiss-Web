@@ -22,6 +22,17 @@
 			
 		}
 		
+		public function insertPet($object) {
+			
+			$member = new Member($object);
+			
+			$member->insertNewPet($member);
+			
+			//$conf = new Configure;
+			//return $conf->View(null, 'índex');
+			
+		}
+		
 	}
 
 ?>
