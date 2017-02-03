@@ -47,11 +47,11 @@
 
 					<li>
 
-						<a href="#" title="PET SPECIALISTS">
+						<a href="#" title="PET SECTION" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('petsection'); ?>">
 
 						<i class="fa fa-user-circle" aria-hidden="true"></i>
 						<br />
-						<span>PET SPECIALISTS</span>
+						<span>PET SECTION</span>
 
 						</a>
 
@@ -59,7 +59,7 @@
 
 					<li>
 
-						<a href="#" title="CALENDER">
+						<a href="#" title="CALENDER" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('calender'); ?>">
 
 						<i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
 						<br />

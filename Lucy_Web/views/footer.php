@@ -17,91 +17,125 @@
 				<div class="modal-body">
                     
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">User</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Dog</a></li>
+                   <!-- <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
                 </ul>
 
                 <div class="tab-content">
                     
                     <div role="tabpanel" class="tab-pane active" id="home">
                     
-                        <br />
-                        
-                        <form class="form-horizontal" method="POST" id="register-form" data-action="insertMember" data-controller="index">
-                              <fieldset>
-                                <div class="control-group">
-                                  <!-- Username -->
-                                  <label class="control-label"  for="username">Username</label>
-                                  <div class="controls">
-                                    <input type="text" id="username" class="form-control input-xlarge" name="username" placeholder="Username" >
-                                    <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-                                  </div>
+                                                <br />
+
+                            <div class="Lcontainer">
+                                <div class="row">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-body">
+                                            <form  method="POST" id="register-form" data-action="insertMember" data-controller="index">
+                                                <div class="form-group">
+                                                    <h2>Create account</h2>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupName">Username</label>
+                                                    <input  id="username"  type="text" maxlength="50" name="username" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupEmail">Email</label>
+                                                    <input id="email" type="email" maxlength="50"  name="email" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupEmailagain">Address</label>
+                                                    <input id="address" type="text" maxlength="50" name="address" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupEmailagain">Telephone</label>
+                                                    <input id="telephone" type="text" maxlength="50" name="telephone" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupPassword">Password</label>
+                                                    <input id="password"  type="password" maxlength="25" name="password" class="form-control" placeholder="at least 6 characters" length="40">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupPasswordagain">Confirm Password</label>
+                                                    <input id="password_confirm" type="password" maxlength="25" name="password_confirm" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputFile">Upload profil picture</label>
+                                                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="submit">
+                                                    <small id="fileHelp" class="form-text text-muted">*Optional </small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button id="submit" type="submit" class="btn btn-info btn-block">Create your account</button>
+                                                </div>
+                                                <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+                                                <hr>
+
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div class="control-group">
-                                  <!-- E-mail -->
-                                  <label class="control-label" for="email">E-mail</label>
-                                  <div class="controls">
-                                    <input type="text" id="email" class="form-control input-xlarge" name="email" placeholder="email@email.com">
-                                    <p class="help-block">Please enter your e-mail</p>
-                                  </div>
-                                </div>
-
-                                <div class="control-group">
-                                  <!-- Telephone -->
-                                  <label class="control-label" for="telephone">Telephone</label>
-                                  <div class="controls">
-                                    <input type="text" id="telephone" class="form-control input-xlarge" name="telephone" placeholder="Telephone Number">
-                                    <p class="help-block">Please enter your Telephone Number</p>
-                                  </div>
-                                </div>
-
-                                <div class="control-group">
-                                  <!-- Address -->
-                                  <label class="control-label" for="address">Address</label>
-                                  <div class="controls">
-                                    <input type="text" id="address" class="form-control input-xlarge" name="address" placeholder="Address">
-                                    <p class="help-block">Please enter your address</p>
-                                  </div>
-                                </div>  
-
-                                <div class="control-group">
-                                  <!-- Password-->
-                                  <label class="control-label" for="password">Password</label>
-                                  <div class="controls">
-                                    <input type="password" id="password" class="form-control input-xlarge" name="password" placeholder="Password">
-                                    <p class="help-block">Password should be at least 6 characters</p>
-                                  </div>
-                                </div>
-
-                                <div class="control-group">
-                                  <!-- Password -->
-                                  <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-                                  <div class="controls">
-                                    <input type="password" id="password_confirm" class="form-control input-xlarge" name="password_confirm" placeholder="Confirm Password" class="input-xlarge">
-                                    <p class="help-block">Please confirm password</p>
-                                  </div>
-                                </div>
-
-                                <div class="control-group">
-                                  <!-- Button -->
-                                  <div class="controls">
-                                    <button class="btn btn-success">Register</button>
-                                  </div>
-                                </div>
-                              </fieldset>
-
-                            </form>
                         
                         </div>
                     
-                        <div role="tabpanel" class="tab-pane" id="profile">test2</div>
-                        <div role="tabpanel" class="tab-pane" id="messages">test3</div>
-                        <div role="tabpanel" class="tab-pane" id="settings">test4</div>
+                        
+                    
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            
+                            <br/>
+                                    <div class="Lcontainer">
+                                <div class="row">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-body">
+                                            <form method="POST" action="#" role="form">
+                                                <div class="form-group">
+                                                    <h2>Register your Dog</h2>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupName">Dog Name</label>
+                                                    <input id="dogname" name="dogname" type="text" maxlength="50" class="form-control">
+                                                </div>
+                                             
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupEmailagain">Dog Age</label>
+                                                    <input id="dogage" name="dogage" type="text" maxlength="50" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupEmailagain">Dog Race</label>
+                                                    <input id="dograce" name="dograce" type="text" maxlength="50" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupPassword">Dog Gender</label>
+                                                     <input id="doggender" name="doggender" type="text" maxlength="50" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label" for="signupPasswordagain">Dog Weight (Aprox*)</label>
+                                                    <input id="dogweight" name="dogweight" type="text" maxlength="25" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="submit" type="submit" class="btn btn-info btn-block">Save</button>
+                                                </div>
+                                                <p class="form-group">You can add more dogs to your profil just go to profil or click <a href="#">Here</a> and our <a href="#">Privacy Policy</a>.</p>
+                                                <hr>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+                     <!--   <div role="tabpanel" class="tab-pane" id="messages">test3</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">test4</div> -->
                     
                     </div>
+                    
+                    
 				</div>
 
 				<div class="modal-footer">
@@ -135,6 +169,10 @@
 	<script src="css/bootstrap-3.3.7/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
     <script type="text/javascript" src="scripts/custom.js"></script>  
+    <script src='/libraries/calendar/lib/moment.min.js'></script>
+    <script src='/libraries/calendar/lib/jquery.min.js'></script>
+    <script src='/libraries/calendar/fullcalendar.min.js'></script>
+    
 
 	</body>
 

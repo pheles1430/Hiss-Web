@@ -229,11 +229,15 @@ if(isset($_POST["action"])) {
 		
 	}
 	
-	if($_POST["action"] != 'login' && $_POST["action"] != 'check') {
+	if($_POST["action"] != 'login' && $_POST["action"] != 'check' && !isset($_POST["controller"])) {
 	
 		echo $conf->ActionResult($_POST["action"], $_POST["controller"] = '', $_POST);
 		
-	}  elseif($_POST["action"] == 'login') {
+	} elseif($_POST["action"] != 'login' && $_POST["action"] != 'check') {
+        
+        echo $conf->ActionResult($_POST["action"], $_POST["controller"], $_POST);
+        
+    } elseif($_POST["action"] == 'login') {
 		
 		if(isset($_POST['rememberMe'])) {
 			

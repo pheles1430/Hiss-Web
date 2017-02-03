@@ -2,12 +2,24 @@
 
 class Member {
 	
+    //Global Var to input member info in database 
+    
 	public $username;
 	public $email;
 	public $telephone;
 	public $address;
 	public $password;
 	
+    
+     //Global Var to input member info in database 
+    
+    public $dogname;
+	public $dogage;
+	public $dograce;
+	public $doggender;
+	public $dogweight;
+	
+    
 	public function __construct($object) 
 	{
 		
@@ -35,7 +47,7 @@ class Member {
 
 		if(mysqli_num_rows($r) >= 1) {
 			
-			echo "Email already exists";
+			echo "Email or Username already exists";
 
 		} else {
 			
@@ -45,6 +57,17 @@ class Member {
 		}
 		
 	}
+    
+    
+    public function insertNewPet($object) {
+		
+            session_start();
+		    include('../connection.php');
+			
+			$q = "INSERT INTO tbl_pets (petname, petage, petrace, petgender, petweight, joining_date) values ('$object->dogname', '$object->dogage', '$object->dograce','$object->doggender', $object->dogweight, current_date())";
+			mysqli_query($dbc, $q);
+			
+		}
 	
 }
 

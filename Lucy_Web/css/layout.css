@@ -412,3 +412,137 @@ footer p {
 	transform: translateX(-50%);
 	
 }
+
+/*Register*/
+
+form { margin: 0px 10px; }
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Lcontainer { 
+    max-width: 500px; 
+    padding-left: 100px;
+}
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.divider hr {
+  margin: 7px 0px;
+  width: 35%;
+}
+
+.left { float: left; }
+
+.right { float: right; }
+
+.user {
+    
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+    
+}
+
+.one {
+    
+  background-image: url('../images/default-profil.png');
+
+}
+
+/*Make responsive table*/
+
+.customers1 {
+	position: relative;
+	border: 1px solid #ddd;
+	font-family: 'Roboto', sans-serif;
+	border-collapse: collapse;
+	width: 90%;
+	border-spacing: 0;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.customers1 th, 
+.customers1 td  {
+	border-bottom: 1px solid #ddd;
+	width: 100px;
+	padding-right: 15px;
+	padding: 12px 0 12px 10px;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	color: rgb(72, 70, 70);
+}
+
+.customers1 th:nth-child(2) {
+	
+	width: 150px;
+
+}
+
+.customers1 tr {
+
+	position: relative;
+	background-color: rgba(233,233,233,0.3);
+
+}
+
+.customers1 tr:not(:last-child) {
+
+	border: 1px #e5e5e5 solid;
+
+}
+
+
+.customers1 tr:hover {
+	background-color: rgba(233,233,233,0.8);
+}
+
+.customers1 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #fff;
+	color: grey;
+	min-width: 100px;
+	max-width: 300px;
+	font-weight: 700;
+}
+
+.customers1 a {
+
+	text-decoration: none;
+	color: rgb(72, 70, 70);
+
+}
+
+
+div.title {
+
+	background: #222;
+	width: 150px;
+	color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	padding-left: 0;
+	font-size: 13px;
+}
+.petsection{
+    
+    padding-left: 200px;
+    
+}
