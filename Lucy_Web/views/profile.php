@@ -12,9 +12,18 @@
 
 ?>
 
-<div>
+<div class="profile">
 
-    <div class="user one">
+    <div class="top">
+    
+        <div class="user one"></div>
+        
+        <div>
+        
+            <h4>Welcome <span>Username</span></h4>
+            
+        </div>
+    
     </div>
     
     <form method="post" action"#" class="container" id="logout-form" data-action="<?php echo $conf->mc_encrypt('login'); ?>">
