@@ -14,3 +14,4 @@
 
 
 <?php include("views/footer.php"); ?>
+<?php include("views/modal.php"); ?>

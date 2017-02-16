@@ -41,6 +41,6 @@
 								<br />
 								
 								<button type="submit" class="btn btn-primary send" id="btn-login">Sign in</button>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register</button>
+								<button type="button" class="btn btn-primary modal-call" data-target="views/register.php" data-title="Register">Register</button>
 							
 							</form>

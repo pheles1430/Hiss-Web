@@ -588,3 +588,143 @@ div.title {
     transform: translateY(45%);
     
 }
+
+/* Pet Section */
+
+
+
+/*Header Pet*/
+
+ 
+.PetSectionHeader h2 {
+	font-size: 40px;
+	line-height: 140px;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+    color: #f4f6f7;
+}
+ 
+#containerP {
+	/*stitching*/
+	outline: 1px dashed #bcc9d3;
+	outline-offset: -5px;
+	
+	background-color: #2a2a2b;
+	height: 160px;
+	width: 800px;
+	margin: 20px auto;
+	
+	/*shadow*/
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+}
+
+/*Content pet*/
+
+.PetPage {
+    
+    position: relative;
+    width: auto;
+    left: 50%;
+    transform: translate(-42%);
+    margin: 0;
+    
+    
+}
+
+.DContent {
+
+    background-color: #2a2a2b;    
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+
+}
+
+
+.PetPage{
+
+    background-color: #fff;
+
+}
+
+.Dinfo{
+    
+    
+    text-align: center;
+    color: aliceblue;
+    margin-top: 5px;
+    height: 30px;
+    
+}
+
+.DSlide {
+    
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+    
+}
+
+/* Info bar */
+
+.contain {
+
+	position: relative;
+	padding-top: 15px;
+
+}
+
+.contain >  h1 {
+
+	padding-left: 30px;
+	margin-bottom: 30px;
+	font-weight: normal;
+	color: #666;
+
+}
+
+div.title {
+
+	background: #222;
+	width: 150px;
+	color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	padding-left: 0;
+	font-size: 13px;
+
+}
+
+.contain h1.currency {
+
+	font-size:  3vw /*50px*/;
+	color: #222;
+	font-weight: 700;
+	font-stretch: wider;
+	font-family: Arial;
+
+}
+
+.contain h1.currency span {
+
+	position: absolute;
+	font-size: 25px;
+	margin-left: -40px;
+
+}
+
+.contain .top {
+
+	position: relative;
+	width: 100%;
+	height: 30em !important;
+	margin-bottom: 3em;
+
+
+}

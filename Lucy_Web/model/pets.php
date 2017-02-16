@@ -2,7 +2,7 @@
 
 class Pets {
 
-	//Global Var to input member info in database 
+	//Global Var to input member info in database  
     
     public $dogname;
 	public $dogage;
@@ -45,14 +45,14 @@ class Pets {
 		
 		$pets = array();
 		
-		$pet = new Pets();
-		
 		$q = "SELECT * FROM tbl_pets";
 		$r = mysqli_query($dbc, $q);
 
 		if(mysqli_num_rows($r) >= 1) {
 			
 			while($row = $r->fetch_assoc()) {
+                
+                $pet = new Pets();
 				
 				$pet->dogname = $row["petname"];
 				$pet->dogage = $row["petage"];
@@ -60,7 +60,7 @@ class Pets {
 				$pet->doggender = $row["petgender"];
 				$pet->dogweight = $row["petweight"];
 				
-				$pets[] = $pet;
+                $pets[] = $pet;
 				
 			}
 			

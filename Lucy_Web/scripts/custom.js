@@ -118,7 +118,7 @@ $(document).ready(function() {
 
 			fetchPage($(this));
 			
-			window.location.href = '#' + $(this).find('span').html().toLocaleLowerCase();
+			window.location.href = '#' + $(this).attr('data-link').toLocaleLowerCase();
 			
 			$('.parallax').addClass('animated fadeIn');
 
@@ -156,20 +156,33 @@ $(document).ready(function() {
 		$('.content, nav, footer').css('-webkit-filter', 'none').css('-moz-filter', 'none').css('filter', 'none');
 		
 	});
-	
-	window.scroll({
-		
-		top: 2500, 
-		left: 0, 
-		behavior: 'smooth'
-		
-	});
     
     //tab system
     
     $(document).on('click', '.nav-tab li', function() {
         
         tabSystem(this);
+        
+    });
+    
+    $(document).on('mouseover', '.DContent', function() {
+        
+       $(this).find('.DSlide').css('height', '150px');
+        
+    });
+    
+    $(document).on('mouseleave', '.DContent', function() {
+        
+       $(this).find('.DSlide').css('height', '0px');
+        
+    });
+    
+    //calling modal
+    $(document).on('click', '.modal-call', function(e) {
+       
+        e.preventDefault();
+        
+        modalCustom($(this), '', '', '')
         
     });
 
@@ -240,17 +253,11 @@ function fetchPage(element) {
 		Avalues[4] = 'dogweight';
 
 		Ajax('POST', 'config/config.php', value);
-
+        
 		for(var i = 0; i < values.length; i += 5) {
-			
-			$('table tbody').append('<tr></tr>');
-			
-			$('table tbody tr:last-child').append('<td>'+ values[i] +'</td>');
-			$('table tbody tr:last-child').append('<td>'+ values[i + 1] +'</td>');
-			$('table tbody tr:last-child').append('<td>'+ values[i + 2] +'</td>');
-			$('table tbody tr:last-child').append('<td>'+ values[i + 3] +'</td>');
-			$('table tbody tr:last-child').append('<td>'+ values[i + 4] +'</td>');
-			
+            
+			$('.PetPage').append('<div class= "DContent modal-call" data-target="views/home/index.php" data-title="'+ values[i] +'"><div class="Dinfo"><span>'+ values[i] +'</span></div> <div class="Dpic"><img src="images/testpic1.jpg" alt="Mountain View" style="width:304px;height:228px;"></div><div class="DSlide"><p>Name: '+ values[i] +'</p>\<p> Age: '+ values[i + 1] +'</p><p> Race: '+ values[i + 2] +'</p><p> Gender'+ values[i + 3] +'</p><p> Weight'+ values[i + 4] +'</p><p>testing the damn shit</p><p>testing the damn shit</p><p>testing the damn shit</p><p>testing the damn shit</p><p>testing the damn shit</p><p>testing the damn shit</p></div>');
+
 		}
 	
 	}
@@ -293,7 +300,7 @@ function Ajax(type, url, value) { //Ajax to fetch data
         dataType: 'json',
         async: false,
         success: function (data) { //data should always be returned as a Json List
-		
+            
             var count = data.length;
 
             var j = 0;
@@ -361,3 +368,33 @@ function tabSystem(element) {
       $(element).tab('show');
     
 }
+
+//Dynamic Page Modal
+//Requires data-title
+//Requires data-target
+
+function modalCustom(element, target, value, title) {
+
+    var modal = $('#myModal');
+
+    if (title == '' || title == null) {
+
+        title = $(element).attr('data-title');
+
+    }
+
+    if (target == '' || target == null) {
+
+        target = $(element).attr('data-target');
+
+    }
+
+    var content = Ajax2('Get', target, value);
+
+    modal.find('.modal-title').text(title);
+    modal.find('.modal-body').html(content);
+
+    $('#myModal').modal();
+
+}
+

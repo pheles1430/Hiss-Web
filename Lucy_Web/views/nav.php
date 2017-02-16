@@ -35,7 +35,7 @@
 
 					<li>
 
-						<a href="#" title="Home" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('home'); ?>">
+						<a href="#"  data-link="home" title="Home" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('home'); ?>">
 
 						<i class="fa fa-home" aria-hidden="true"></i>
 						<br />
@@ -47,7 +47,7 @@
 
 					<li>
 
-						<a href="#" title="PET SECTION" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('petsection'); ?>">
+						<a href="#" data-link="pet_section" title="PET SECTION" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('petsection'); ?>">
 
 						<i class="fa fa-user-circle" aria-hidden="true"></i>
 						<br />
@@ -59,7 +59,7 @@
 
 					<li>
 
-						<a href="#" title="CALENDER" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('calender'); ?>">
+						<a href="#" data-link="calender" title="CALENDER" data-action="<?php echo $conf->mc_encrypt('index'); ?>" data-controller="<?php echo $conf->mc_encrypt('calender'); ?>">
 
 						<i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
 						<br />
@@ -71,7 +71,7 @@
 
 					<li>
 
-						<a href="#" title="OFFERS">
+						<a href="#" data-link="offers" title="OFFERS">
 
 						<i class="fa fa-money" aria-hidden="true"></i>
 						<br />
